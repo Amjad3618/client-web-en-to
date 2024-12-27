@@ -6,6 +6,7 @@ import '../Widgets/custom_text_btn.dart';
 import '../Widgets/custome_elevated_btn.dart';
 import '../Widgets/custome_intro_cont.dart';
 import '../Widgets/custome_text.dart';
+import '../Widgets/user_container.dart';
 
 class LoginWeb extends StatelessWidget {
   const LoginWeb({super.key});
@@ -307,8 +308,11 @@ class LoginWeb extends StatelessWidget {
                                   "Once your file is uploaded, our advanced AI-driven transcription technology \n takes over. This technology is designed to convert spoken language into highly accurate  \n text. It adjusts for different accents and dialects, recognizes technical terminology,  \n and can differentiate between speakers in multi-person recordings, \n making it ideal for everything from lectures to interviews.",
                               textAlign: TextAlign.center,
                             ),
-                            SizedBox(height: 10,),
-                            CustomTextButton(onPressed: (){}, label: "GET STARTED")
+                            SizedBox(
+                              height: 10,
+                            ),
+                            CustomTextButton(
+                                onPressed: () {}, label: "GET STARTED")
                           ],
                         ),
                       )
@@ -317,7 +321,9 @@ class LoginWeb extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Container(
               height: MediaQuery.of(context).size.height * 0.6,
               width: MediaQuery.of(context).size.width * 0.9,
@@ -328,7 +334,6 @@ class LoginWeb extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                     
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
@@ -356,14 +361,15 @@ class LoginWeb extends StatelessWidget {
                                   "Once your file is uploaded, our advanced AI-driven transcription technology \n takes over. This technology is designed to convert spoken language into highly accurate  \n text. It adjusts for different accents and dialects, recognizes technical terminology,  \n and can differentiate between speakers in multi-person recordings, \n making it ideal for everything from lectures to interviews.",
                               textAlign: TextAlign.center,
                             ),
-                            SizedBox(height: 10,),
-                            CustomTextButton(onPressed: (){}, label: "GET STARTED"),
-                            
+                            SizedBox(
+                              height: 10,
+                            ),
+                            CustomTextButton(
+                                onPressed: () {}, label: "GET STARTED"),
                           ],
                         ),
-                      )
-                      ,
-                       Container(
+                      ),
+                      Container(
                         height: MediaQuery.of(context).size.height * 0.5,
                         width: MediaQuery.of(context).size.width * 0.3,
                         decoration: BoxDecoration(
@@ -378,7 +384,173 @@ class LoginWeb extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.5,
+              width: MediaQuery.of(context).size.width * 0.9,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [Colors.white, Colors.blue]),
+                  borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset(
+                    "assets/ARROW.png",
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomTextWidget(
+                        text:
+                            "AI-Powered Speech Recognition & \n Transcription",
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        textColor: whittextcolor,
+                      ),
+                      CustomTextWidget(
+                        text:
+                            "Revolutionize transcription with our AI-powered speech recognition.\n Convert speech to text effortlessly,\n enhancing productivity and accessibility.",
+                        textColor: whittextcolor,
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: UserFormContainer(
+                      height: 300.0, // Set the height as you want
+                      width: 400.0, // Set the width as you want
+                      backgroundColor: Colors
+                          .blue.shade100, // Optional: Custom background color
+                      borderRadius: 20.0, // Optional: Custom border radius
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CustomTextWidget(text: "Sarah Thompson"),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                                height: 35,
+                                width: 300,
+                                decoration: BoxDecoration(
+                                    color: blacktextcolor,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Center(
+                                  child: CustomTextWidget(
+                                    text:
+                                        "Marketing Manager, Bright Ideas Media",
+                                    textColor: whittextcolor,
+                                  ),
+                                )),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Expanded(
+                              child: CustomTextWidget(
+                                  text:
+                                      "SoundType AI has revolutionized the way \n we handle our transcription needs.\n The accuracy and speed of their service\n are unparalleled.\n We can quickly transcribe meetings,\n interviews, and webinars with ease. The customer \n support team is always \n ready to help, ensuring a seamless \n experience every time."),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  UserFormContainer(
+                      backgroundColor: Colors.grey,
+                      height: 300,
+                      width: 400,
+                      child: Column(
+                        children: [
+                          CustomTextWidget(text: "David Lee"),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                              height: 35,
+                              width: 300,
+                              decoration: BoxDecoration(
+                                  color: blacktextcolor,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Center(
+                                child: CustomTextWidget(
+                                  text: "CEO, Innovate Tech Solutions",
+                                  textColor: whittextcolor,
+                                ),
+                              )),
+                          SizedBox(height: 10),
+                          CustomTextWidget(
+                            text:
+                                "SoundType AI has been a game \nchanger for our business. \nThe transcription quality is \noutstanding, and the platform \nis user-friendly. We have saved \ncountless hours of manual transcription \nwork, allowing us to focus more \non our core operations.\nHighly recommended!",
+                            textColor:
+                                blacktextcolor, // Assuming you want the text in black
+                            fontSize: 14.0, // Adjust font size as needed
+                            textAlign:
+                                TextAlign.center, // Aligning text to center
+                          ),
+                        ],
+                      )),
+                      UserFormContainer(
+                      height: 300.0, // Set the height as you want
+                      width: 400.0, // Set the width as you want
+                      backgroundColor: Colors
+                          .blue.shade100, // Optional: Custom background color
+                      borderRadius: 20.0, // Optional: Custom border radius
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CustomTextWidget(text: "Robert Anderson"),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                                height: 35,
+                                width: 300,
+                                decoration: BoxDecoration(
+                                    color: blacktextcolor,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Center(
+                                  child: CustomTextWidget(
+                                    text:
+                                        "Legal Assistant, Law & Co.",
+                                    textColor: whittextcolor,
+                                  ),
+                                )),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Expanded(
+                              child: CustomTextWidget(
+                                  text:
+                                      "SoundType AI has been a reliable partner \n for our legal transcriptions. \n The accuracy is critical for our  \n case documentation, and SoundType AI delivers  \n consistently. The various export options,  \n including PDF and DOCX, make it easy to share  \n and archive our transcriptions efficiently"),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
