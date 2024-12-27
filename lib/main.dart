@@ -1,7 +1,7 @@
 import 'package:client_web_1/Layouts/layout_builder.dart';
 import 'package:client_web_1/Mobile_size_screens/Login_mobile.dart';
 import 'package:client_web_1/Utils/colors.dart';
-import 'package:client_web_1/Web_size_screens/login_web.dart';
+import 'package:client_web_1/Web_size_screens/intro_screen_web.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,6 +23,6 @@ class MyApp extends StatelessWidget {
         ),
         home: LayoutBuilderCode(
             mobilescreen: LoginMobile(), 
-            websitescreen: LoginWeb()));
+            websitescreen: IntroScreenWeb()));
   }
 }

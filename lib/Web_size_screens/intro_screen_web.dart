@@ -1,5 +1,7 @@
 import 'package:client_web_1/Utils/colors.dart';
+import 'package:client_web_1/Web_size_screens/login_screen_web.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
 import '../Widgets/custom_text_btn.dart';
@@ -8,8 +10,8 @@ import '../Widgets/custome_intro_cont.dart';
 import '../Widgets/custome_text.dart';
 import '../Widgets/user_container.dart';
 
-class LoginWeb extends StatelessWidget {
-  const LoginWeb({super.key});
+class IntroScreenWeb extends StatelessWidget {
+  const IntroScreenWeb({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,11 @@ class LoginWeb extends StatelessWidget {
           SizedBox(
             width: 30,
           ),
-          CustomTextButton(onPressed: () {}, label: "LOGIN"),
+          CustomTextButton(
+              onPressed: () {
+                Get.to(LoginScreenWeb());
+              },
+              label: "LOGIN"),
           SizedBox(
             width: 20,
           ),
@@ -73,7 +79,7 @@ class LoginWeb extends StatelessWidget {
             Center(
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.8,
-                width: MediaQuery.of(context).size.width * 0.9,
+                width: MediaQuery.of(context).size.width ,
                 decoration: BoxDecoration(
                   color: Colors.grey[200],
                   borderRadius: BorderRadius.circular(15),
@@ -194,10 +200,12 @@ class LoginWeb extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Image.asset(
-                                  "assets/3dweb.webp",
+                                SizedBox(
                                   height:
                                       MediaQuery.of(context).size.height * 0.6,
+                                  child: Image.asset(
+                                    "assets/3dweb.webp",
+                                  ),
                                 ),
                                 Lottie.asset(
                                   'assets/Animation - 1735297018291.json', // Path to your Lottie file
@@ -507,47 +515,46 @@ class LoginWeb extends StatelessWidget {
                           ),
                         ],
                       )),
-                      UserFormContainer(
-                      height: 300.0, // Set the height as you want
-                      width: 400.0, // Set the width as you want
-                      backgroundColor: Colors
-                          .blue.shade100, // Optional: Custom background color
-                      borderRadius: 20.0, // Optional: Custom border radius
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CustomTextWidget(text: "Robert Anderson"),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Container(
-                                height: 35,
-                                width: 300,
-                                decoration: BoxDecoration(
-                                    color: blacktextcolor,
-                                    borderRadius: BorderRadius.circular(10)),
-                                child: Center(
-                                  child: CustomTextWidget(
-                                    text:
-                                        "Legal Assistant, Law & Co.",
-                                    textColor: whittextcolor,
-                                  ),
-                                )),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Expanded(
-                              child: CustomTextWidget(
-                                  text:
-                                      "SoundType AI has been a reliable partner \n for our legal transcriptions. \n The accuracy is critical for our  \n case documentation, and SoundType AI delivers  \n consistently. The various export options,  \n including PDF and DOCX, make it easy to share  \n and archive our transcriptions efficiently"),
-                            )
-                          ],
-                        ),
+                  UserFormContainer(
+                    height: 300.0, // Set the height as you want
+                    width: 400.0, // Set the width as you want
+                    backgroundColor: Colors
+                        .blue.shade100, // Optional: Custom background color
+                    borderRadius: 20.0, // Optional: Custom border radius
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomTextWidget(text: "Robert Anderson"),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                              height: 35,
+                              width: 300,
+                              decoration: BoxDecoration(
+                                  color: blacktextcolor,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Center(
+                                child: CustomTextWidget(
+                                  text: "Legal Assistant, Law & Co.",
+                                  textColor: whittextcolor,
+                                ),
+                              )),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Expanded(
+                            child: CustomTextWidget(
+                                text:
+                                    "SoundType AI has been a reliable partner \n for our legal transcriptions. \n The accuracy is critical for our  \n case documentation, and SoundType AI delivers  \n consistently. The various export options,  \n including PDF and DOCX, make it easy to share  \n and archive our transcriptions efficiently"),
+                          )
+                        ],
                       ),
                     ),
+                  ),
                 ],
               ),
             ),
