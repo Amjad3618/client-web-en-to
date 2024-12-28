@@ -78,15 +78,15 @@ class _LogInMobileScreenState extends State<LogInMobileScreen> {
                           icon: Icons.email_outlined,
                           hintText: 'Email',
                           keyboardType: TextInputType.emailAddress,
-                          // validator: (value) {
-                          //   if (value!.isEmpty) {
-                          //     return 'Please enter your email';
-                          //   }
-                          //   if (!value.contains('@')) {
-                          //     return 'Please enter a valid email';
-                          //   }
-                          //   return null;
-                          // },
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please enter your email';
+                            }
+                            if (!value.contains('@')) {
+                              return 'Please enter a valid email';
+                            }
+                            return null;
+                          },
                         ),
                         const SizedBox(height: 16),
 
@@ -107,15 +107,15 @@ class _LogInMobileScreenState extends State<LogInMobileScreen> {
                               });
                             },
                           ),
-                          // validator: (value) {
-                          //   if (value!.isEmpty) {
-                          //     return 'Please enter your password';
-                          //   }
-                          //   if (value.length < 6) {
-                          //     return 'Password must be at least 6 characters';
-                          //   }
-                          //   return null;
-                          // },
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please enter your password';
+                            }
+                            if (value.length < 6) {
+                              return 'Password must be at least 6 characters';
+                            }
+                            return null;
+                          },
                         ),
                        
                         const SizedBox(height: 24),
