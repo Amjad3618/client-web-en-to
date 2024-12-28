@@ -1,4 +1,7 @@
+import 'package:client_web_1/Mobile_size_screens/premium_screen_mobile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 class HomeMobileScreen extends StatefulWidget {
   const HomeMobileScreen({super.key});
@@ -23,6 +26,22 @@ class _HomeMobileScreenState extends State<HomeMobileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('English to Dhevi'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: SizedBox(
+              height: 160,
+              width: 160,
+              child: InkWell(
+                onTap: () => Get.to(() => const PremiumScreenMobile()),
+                child: Lottie.asset("assets/premiumanimation.json"),
+              ),
+            ),
+          ),
+        ],
+      ),
       backgroundColor: Colors.grey[50],
       body: Center(
         child: Container(
@@ -107,7 +126,9 @@ class _HomeMobileScreenState extends State<HomeMobileScreen> {
                                     IconButton(
                                       icon: Icon(
                                         isRecording ? Icons.stop : Icons.mic,
-                                        color: isRecording ? Colors.red : Colors.grey,
+                                        color: isRecording
+                                            ? Colors.red
+                                            : Colors.grey,
                                       ),
                                       onPressed: () {
                                         setState(() {
