@@ -1,8 +1,6 @@
 import 'package:client_web_1/Mobile_size_screens/forgor_psd_mobile.dart';
 import 'package:client_web_1/Mobile_size_screens/home_mobile_screen.dart';
 import 'package:client_web_1/Mobile_size_screens/singup_mobile_screen.dart';
-import 'package:client_web_1/Web_size_screens/forgor_pasd_screen_web.dart';
-import 'package:client_web_1/Web_size_screens/singup_screen_web.dart';
 import 'package:client_web_1/Widgets/custome_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
