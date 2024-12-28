@@ -1,3 +1,6 @@
+import 'package:client_web_1/Mobile_size_screens/forgor_psd_mobile.dart';
+import 'package:client_web_1/Mobile_size_screens/home_mobile_screen.dart';
+import 'package:client_web_1/Mobile_size_screens/singup_mobile_screen.dart';
 import 'package:client_web_1/Web_size_screens/forgor_pasd_screen_web.dart';
 import 'package:client_web_1/Web_size_screens/singup_screen_web.dart';
 import 'package:client_web_1/Widgets/custome_text.dart';
@@ -5,14 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
-class LoginScreenWeb extends StatefulWidget {
-  const LoginScreenWeb({super.key});
+class LogInMobileScreen extends StatefulWidget {
+  const LogInMobileScreen({super.key});
 
   @override
-  State<LoginScreenWeb> createState() => _LoginScreenWebState();
+  State<LogInMobileScreen> createState() => _LogInMobileScreenState();
 }
 
-class _LoginScreenWebState extends State<LoginScreenWeb> {
+class _LogInMobileScreenState extends State<LogInMobileScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -125,6 +128,7 @@ class _LoginScreenWebState extends State<LoginScreenWeb> {
                             _unfocusFields();
                             if (_formKey.currentState!.validate()) {
                               // Handle successful login logic here
+                              Get.to(HomeMobileScreen());
                             }
                           },
                           style: ElevatedButton.styleFrom(
@@ -147,7 +151,7 @@ class _LoginScreenWebState extends State<LoginScreenWeb> {
 
                         // Forgot Password
                         TextButton(
-                          onPressed: () { Get.to(ForgotPasswordScreenWeb());
+                          onPressed: () { Get.to(forgotPasswordMobile());
                             // Handle forgot password action
                           },
                           child: const Text('Forgot Password?'),
@@ -158,7 +162,7 @@ class _LoginScreenWebState extends State<LoginScreenWeb> {
                             CustomTextWidget(text: "Dont have an accout?"),
                             TextButton(
                                 onPressed: () {
-                                  Get.to(SingUpScreenWeb());
+                                  Get.to(SingUpMobileScreen());
                                 },
                                 child: Text("SingUp"))
                           ],

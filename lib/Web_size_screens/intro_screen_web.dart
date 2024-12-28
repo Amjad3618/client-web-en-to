@@ -1,5 +1,6 @@
 import 'package:client_web_1/Utils/colors.dart';
 import 'package:client_web_1/Web_size_screens/login_screen_web.dart';
+import 'package:client_web_1/Web_size_screens/singup_screen_web.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -61,12 +62,17 @@ class IntroScreenWeb extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16), // Rounded corners
               ),
             ),
-            child: Text(
-              "Register",
-              style: TextStyle(
-                  color: whittextcolor,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold),
+            child: InkWell(
+              onTap: () {
+                Get.to(SingUpScreenWeb());
+              },
+              child: Text(
+                "Register",
+                style: TextStyle(
+                    color: whittextcolor,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           )
         ],
@@ -79,7 +85,7 @@ class IntroScreenWeb extends StatelessWidget {
             Center(
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.8,
-                width: MediaQuery.of(context).size.width ,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.grey[200],
                   borderRadius: BorderRadius.circular(15),
@@ -170,6 +176,7 @@ class IntroScreenWeb extends StatelessWidget {
                                   CustomElevatedButton(
                                     onPressed: () {
                                       // Your action here
+                                      Get.to(SingUpScreenWeb());
                                     },
                                     label: "Register",
                                     backgroundColor: Colors.blue,
@@ -196,27 +203,33 @@ class IntroScreenWeb extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.6,
-                                  child: Image.asset(
-                                    "assets/3dweb.webp",
+                        Expanded(
+                            flex: 3,
+                            child: LayoutBuilder(
+                              builder: (context, constraints) {
+                                return SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: [
+                                      Image.asset(
+                                        "assets/3dweb.webp",
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.6,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      Lottie.asset(
+                                        'assets/Animation - 1735297018291.json',
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.3,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ],
                                   ),
-                                ),
-                                Lottie.asset(
-                                  'assets/Animation - 1735297018291.json', // Path to your Lottie file
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.3,
-                                  fit: BoxFit.contain,
-                                ),
-                              ],
-                            )
-                          ],
-                        )
+                                );
+                              },
+                            ))
                       ],
                     )
                   ],

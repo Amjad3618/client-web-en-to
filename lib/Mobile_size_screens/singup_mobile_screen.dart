@@ -1,18 +1,16 @@
-import 'package:client_web_1/Web_size_screens/forgor_pasd_screen_web.dart';
-import 'package:client_web_1/Web_size_screens/singup_screen_web.dart';
 import 'package:client_web_1/Widgets/custome_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
-class LoginScreenWeb extends StatefulWidget {
-  const LoginScreenWeb({super.key});
+class SingUpMobileScreen extends StatefulWidget {
+  const SingUpMobileScreen({super.key});
 
   @override
-  State<LoginScreenWeb> createState() => _LoginScreenWebState();
+  State<SingUpMobileScreen> createState() => _SingUpMobileScreenState();
 }
 
-class _LoginScreenWebState extends State<LoginScreenWeb> {
+class _SingUpMobileScreenState extends State<SingUpMobileScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -53,15 +51,13 @@ class _LoginScreenWebState extends State<LoginScreenWeb> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Lottie.asset(
-                          'assets/Animation - 1735297018291.json', // Path to your Lottie file
+                          'assets/Animation - 1735297018291.json',
                           height: MediaQuery.of(context).size.height * 0.2,
                           fit: BoxFit.contain,
                         ),
-                        SizedBox(
-                          height: 15,
-                        ),
+                        const SizedBox(height: 15),
                         const Text(
-                          'Welcome Back',
+                          'Sign Up With email & password',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 24,
@@ -116,10 +112,9 @@ class _LoginScreenWebState extends State<LoginScreenWeb> {
                             return null;
                           },
                         ),
-                       
                         const SizedBox(height: 24),
 
-                        // Login Button
+                        // SignUp Button
                         ElevatedButton(
                           onPressed: () {
                             _unfocusFields();
@@ -135,7 +130,7 @@ class _LoginScreenWebState extends State<LoginScreenWeb> {
                             ),
                           ),
                           child: const Text(
-                            'Log In',
+                            'SignUp',
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white,
@@ -145,22 +140,71 @@ class _LoginScreenWebState extends State<LoginScreenWeb> {
                         ),
                         const SizedBox(height: 16),
 
-                        // Forgot Password
-                        TextButton(
-                          onPressed: () { Get.to(ForgotPasswordScreenWeb());
-                            // Handle forgot password action
-                          },
-                          child: const Text('Forgot Password?'),
+                        // OR Divider
+                        Row(
+                          children: const [
+                            Expanded(child: Divider()),
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                'OR',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Expanded(child: Divider()),
+                            
+                          ],
                         ),
+                        const SizedBox(height: 16),
+
+                        // Continue with Google Button
+                        OutlinedButton(
+                          onPressed: () {
+                            // Handle Google sign-in
+                          },
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            side: BorderSide(color: Colors.grey.shade300),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                "assets/google.png",
+                                height: 24,
+                                width: 24,
+                              ),
+                              const SizedBox(width: 12),
+                              const Text(
+                                'Continue with Google',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        const SizedBox(height: 16),
+                       
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            CustomTextWidget(text: "Dont have an accout?"),
+                            CustomTextWidget(text: "Already have an account?"),
                             TextButton(
-                                onPressed: () {
-                                  Get.to(SingUpScreenWeb());
-                                },
-                                child: Text("SingUp"))
+                              onPressed: () {
+                                Get.back();
+                              },
+                              child: Text("LogIn"),
+                            )
                           ],
                         )
                       ],
