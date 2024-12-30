@@ -4,13 +4,11 @@ import 'package:client_web_1/Web_size_screens/singup_screen_web.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 import '../Widgets/custom_text_btn.dart';
 import '../Widgets/custome_elevated_btn.dart';
 
 import '../Widgets/custome_text.dart';
 import 'login_mobile_screen.dart';
-
 
 class IntroMobileScreen extends StatelessWidget {
   const IntroMobileScreen({super.key});
@@ -40,8 +38,11 @@ class IntroMobileScreen extends StatelessWidget {
           ],
         ),
         actions: [
-         CustomTextButton( onPressed: () => Get.to(LogInMobileScreen()), label: "LOGIN"),
-         SizedBox(width: 15,),
+          CustomTextButton(
+              onPressed: () => Get.to(LogInMobileScreen()), label: "LOGIN"),
+          SizedBox(
+            width: 15,
+          ),
           ElevatedButton(
             onPressed: () => Get.to(LogInMobileScreen()),
             style: ElevatedButton.styleFrom(
@@ -52,7 +53,7 @@ class IntroMobileScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             ),
             child: InkWell(
-              onTap: (){
+              onTap: () {
                 Get.to(SingUpMobileScreen());
               },
               child: Text(
@@ -83,12 +84,13 @@ class IntroMobileScreen extends StatelessWidget {
                     Wrap(
                       spacing: 8,
                       children: [
-                        _buildFeatureTag("💫 Exceptional Accuracy", blacktextcolor),
+                        _buildFeatureTag(
+                            "💫 Exceptional Accuracy", blacktextcolor),
                         _buildFeatureTag("🔥 Speaker ID", Colors.blueAccent),
                       ],
                     ),
                     const SizedBox(height: 16),
-                    
+
                     // Main Heading
                     Text(
                       "AI-Powered Audio & Video Transcription",
@@ -99,17 +101,17 @@ class IntroMobileScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 12),
-                    
+
                     // Description
                     Text(
-                      "Transform your meetings, interviews, and discussions into searchable text effortlessly with SoundType AI.",
+                      "Effortlessly transform your meetings, interviews, and discussions into searchable text with SoundType AI. Simplify transcription, editing, summarization, and collaboration in one seamless workflow, designed to boost your productivity.",
                       style: TextStyle(
                         color: blacktextcolor,
                         fontSize: 14,
                       ),
                     ),
                     const SizedBox(height: 16),
-                    
+
                     // Action Buttons
                     Row(
                       children: [
@@ -139,7 +141,7 @@ class IntroMobileScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    
+
                     // Hero Image
                     Center(
                       child: Image.asset(
@@ -151,9 +153,9 @@ class IntroMobileScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              
+
               const SizedBox(height: 24),
-              
+
               // Features Section
               ListView(
                 shrinkWrap: true,
@@ -161,26 +163,26 @@ class IntroMobileScreen extends StatelessWidget {
                 children: [
                   _buildFeatureCard(
                     "High Accuracy",
-                    "Ensure precise and reliable results with our advanced technology.",
+                    "Experience precision and reliability with our cutting-edge technology, offering unparalleled accuracy in converting English speech to Dhehivi text, ensuring seamless data processing and analysis.",
                     Colors.blue.shade300,
                   ),
                   const SizedBox(height: 16),
                   _buildFeatureCard(
                     "AI Summary",
-                    "Quickly understand key points with our AI Summary tool.",
+                    "Quickly understand key points and essential information with our AI Summary tool, which condenses large volumes of text into concise, digestible summaries.",
                     Colors.blue,
                   ),
                   const SizedBox(height: 16),
                   _buildFeatureCard(
                     "Chat with your audio",
-                    "Engage directly with your audio content through our interactive chat feature.",
+                    "Engage directly with your audio content through our interactive chat feature, allowing you to converse and get real-time responses from your recorded audio files.",
                     blacktextcolor,
                   ),
                 ],
               ),
-              
+
               const SizedBox(height: 24),
-              
+
               // How It Works Section
               const CustomTextWidget(
                 text: "How does it work?",
@@ -189,7 +191,7 @@ class IntroMobileScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 16),
-              
+
               _buildHowItWorksStep(
                 context,
                 "1",
@@ -197,20 +199,20 @@ class IntroMobileScreen extends StatelessWidget {
                 "assets/how1.jpg",
                 "Our advanced AI-driven transcription technology converts spoken language into highly accurate text.",
               ),
-              
+
               const SizedBox(height: 16),
-              
+
               _buildHowItWorksStep(
                 context,
                 "2",
-                "Edit & Review",
+                "Speak and & Review",
                 "assets/how2.jpg",
                 "Review and edit your transcriptions with our user-friendly interface.",
                 imageFirst: false,
               ),
-              
+
               const SizedBox(height: 24),
-              
+
               // Testimonials Section
               _buildTestimonialCard(
                 "Sarah Thompson",
