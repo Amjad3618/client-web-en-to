@@ -1,6 +1,7 @@
 import 'package:client_web_1/Layouts/layout_builder.dart';
 import 'package:client_web_1/Mobile_size_screens/intro_mobile_screen.dart.dart';
 import 'package:client_web_1/Utils/colors.dart';
+import 'package:client_web_1/Web_size_screens/home_screen_web.dart';
 import 'package:client_web_1/Web_size_screens/intro_screen_web.dart';
 
 import 'package:flutter/material.dart';
@@ -22,10 +23,10 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
        scaffoldBackgroundColor: bgColor
         ),
-        // home: LoginScreenWeb(),);
-        home: LayoutBuilderCode(
-            mobilescreen: IntroMobileScreen(), 
-            websitescreen: IntroScreenWeb()));
+        home: HomeScreenWeb(),);
+        // home: LayoutBuilderCode(
+        //     mobilescreen: IntroMobileScreen(), 
+        //     websitescreen: IntroScreenWeb()));
   }
 }
 //flutter run -d chrome

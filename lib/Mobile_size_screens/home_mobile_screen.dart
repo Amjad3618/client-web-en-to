@@ -32,11 +32,11 @@ class _HomeMobileScreenState extends State<HomeMobileScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
             child: SizedBox(
-              height: 160,
-              width: 160,
+              height: 50,
+              width: 50,
               child: InkWell(
                 onTap: () => Get.to(() => const PremiumScreenMobile()),
-                child: Lottie.asset("assets/premiumanimation.json"),
+                child: Lottie.asset("assets/premiumanimationtext.json",height: 50,width: 50,fit: BoxFit.cover),
               ),
             ),
           ),

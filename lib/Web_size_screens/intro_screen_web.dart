@@ -148,7 +148,7 @@ class IntroScreenWeb extends StatelessWidget {
                           child: Column(
                             children: [
                               Text(
-                                "AI-Powered Audio & \n Video Transcription",
+                                "AI-Powered Audio & \n Text Transcription",
                                 style: TextStyle(
                                     color: blacktextcolor,
                                     fontSize: 40,
@@ -158,9 +158,9 @@ class IntroScreenWeb extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                "Transform your meetings, interviews, and discussions into searchable \n text effortlessly with SoundType AI. Streamline transcription, editing, \n summarization, and collaboration in one integrated workflow to boost \n productivity.",
+                                "Effortlessly transform your meetings, interviews, and discussions into searchable text with SoundType AI. Simplify transcription, editing, summarization, and collaboration in one seamless workflow, designed to boost your productivity.",
                                 textAlign: TextAlign
-                                    .start, // Correct property for alignment
+                                    .center, // Correct property for alignment
                                 style: TextStyle(
                                   color: blacktextcolor,
                                   fontSize: 13,
@@ -245,7 +245,7 @@ class IntroScreenWeb extends StatelessWidget {
                 CustomIntroContainer(
                   title: "High Accuracy",
                   description:
-                      "Ensure precise and reliable results with our advanced technology that delivers high accuracy in data processing and analysis.",
+                      "Experience precision and reliability with our cutting-edge technology, offering unparalleled accuracy in converting English speech to Dhehivi text, ensuring seamless data processing and analysis.",
                   backgroundColor: const Color.fromARGB(255, 121, 183, 212),
                   textColor: Colors.white,
                   color: Colors.blue.shade300,
@@ -326,7 +326,7 @@ class IntroScreenWeb extends StatelessWidget {
                             ),
                             CustomTextWidget(
                               text:
-                                  "Once your file is uploaded, our advanced AI-driven transcription technology \n takes over. This technology is designed to convert spoken language into highly accurate  \n text. It adjusts for different accents and dialects, recognizes technical terminology,  \n and can differentiate between speakers in multi-person recordings, \n making it ideal for everything from lectures to interviews.",
+                                  "Once your file is uploaded, our advanced AI-driven transcription technology takes over. It is specifically designed to convert spoken language into highly accurate text, accommodating various accents and dialects. The system recognizes technical terminology and distinguishes between speakers in multi-person recordings, making it perfect for applications ranging from lectures to interviews.",
                               textAlign: TextAlign.center,
                             ),
                             SizedBox(
@@ -434,8 +434,7 @@ class IntroScreenWeb extends StatelessWidget {
                       ),
                       CustomTextWidget(
                         text:
-                            "Revolutionize transcription with our AI-powered speech recognition.\n Convert speech to text effortlessly,\n enhancing productivity and accessibility.",
-                        textColor: whittextcolor,
+                            "Upload your file, and our advanced AI-powered transcription system will handle the rest. It accurately converts spoken language into text, adapting to diverse accents and dialects. With the ability to recognize technical terms and identify different speakers in group recordings, it’s the perfect solution for lectures, interviews, and more.",
                       )
                     ],
                   )
@@ -487,7 +486,7 @@ class IntroScreenWeb extends StatelessWidget {
                             Expanded(
                               child: CustomTextWidget(
                                   text:
-                                      "SoundType AI has revolutionized the way \n we handle our transcription needs.\n The accuracy and speed of their service\n are unparalleled.\n We can quickly transcribe meetings,\n interviews, and webinars with ease. The customer \n support team is always \n ready to help, ensuring a seamless \n experience every time."),
+                                      "Our platform specializes in delivering advanced speech-to-text services through powerful APIs. With unmatched accuracy and efficiency, we provide seamless solutions for converting speech into text, supported by reliable technology and exceptional customer support."),
                             )
                           ],
                         ),
@@ -519,7 +518,7 @@ class IntroScreenWeb extends StatelessWidget {
                           SizedBox(height: 10),
                           CustomTextWidget(
                             text:
-                                "SoundType AI has been a game \nchanger for our business. \nThe transcription quality is \noutstanding, and the platform \nis user-friendly. We have saved \ncountless hours of manual transcription \nwork, allowing us to focus more \non our core operations.\nHighly recommended!",
+                                "SoundType AI has revolutionized our business operations. The transcription quality is exceptional, and the platform is incredibly user-friendly. It has saved us countless hours of manual transcription, enabling us to concentrate on our core activities. Highly recommended!",
                             textColor:
                                 blacktextcolor, // Assuming you want the text in black
                             fontSize: 14.0, // Adjust font size as needed
@@ -562,7 +561,7 @@ class IntroScreenWeb extends StatelessWidget {
                           Expanded(
                             child: CustomTextWidget(
                                 text:
-                                    "SoundType AI has been a reliable partner \n for our legal transcriptions. \n The accuracy is critical for our  \n case documentation, and SoundType AI delivers  \n consistently. The various export options,  \n including PDF and DOCX, make it easy to share  \n and archive our transcriptions efficiently"),
+                                    "Our website is dedicated to providing advanced speech-to-text solutions, specializing in converting English and Maldivian speech into Dhivehi text with exceptional accuracy. Designed to cater to a wide range of needs, our platform ensures seamless transcription services tailored for the Maldivian language. With user-friendly features and support for multiple export formats, including PDF and DOCX, we make it effortless to share, store, and utilize your transcriptions efficiently."),
                           )
                         ],
                       ),

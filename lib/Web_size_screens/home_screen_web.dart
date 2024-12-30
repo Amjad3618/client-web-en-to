@@ -208,13 +208,9 @@ class _HomeScreenWebState extends State<HomeScreenWeb> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
-            child: SizedBox(
-              height: 160,
-              width: 160,
-              child: InkWell(
-                onTap: () => Get.to(() => const PremiumScreenWeb()),
-                child: Lottie.asset("assets/premiumanimation.json"),
-              ),
+            child: InkWell(
+              onTap: () => Get.to(() => const PremiumScreenWeb()),
+              child: Lottie.asset("assets/premiumanimationtext.json"),
             ),
           ),
         ],
