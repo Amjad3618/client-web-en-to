@@ -83,159 +83,137 @@ class IntroScreenWeb extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.8,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                                height: 40,
-                                decoration: BoxDecoration(
-                                    color: blacktextcolor,
-                                    borderRadius: BorderRadius.circular(15)),
-                                child: Center(
-                                    child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    " 💫 Exceptional Accuracy",
-                                    style: TextStyle(
-                                        color: whittextcolor, fontSize: 13),
-                                  ),
-                                ))),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: Colors.blueAccent,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Center(
-                                    child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    "🔥 Speaker Identification",
-                                    style: TextStyle(
-                                        color: blacktextcolor,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ))),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                child: Container(
+              height: MediaQuery.of(context).size.height * 0.8,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "AI-Powered Audio & \n Text Transcription",
+                        Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                                color: blacktextcolor,
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "💫 Exceptional Accuracy",
+                                style: TextStyle(
+                                    color: whittextcolor, fontSize: 13),
+                              ),
+                            ))),
+                        Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "🔥 Speaker Identification",
                                 style: TextStyle(
                                     color: blacktextcolor,
-                                    fontSize: 40,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Effortlessly transform your meetings, interviews, and discussions into searchable text with SoundType AI. Simplify transcription, editing, summarization, and collaboration in one seamless workflow, designed to boost your productivity.",
-                                textAlign: TextAlign
-                                    .center, // Correct property for alignment
-                                style: TextStyle(
-                                  color: blacktextcolor,
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.bold,
+                            ))),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 2,
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "AI-Powered Audio & \nText Transcription",
+                                  style: TextStyle(
+                                      color: blacktextcolor,
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.bold),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  CustomElevatedButton(
-                                    onPressed: () {
-                                      // Your action here
-                                      Get.to(SingUpScreenWeb());
-                                    },
-                                    label: "Register",
-                                    backgroundColor: Colors.blue,
-                                    textColor: Colors.white,
-                                    fontSize: 15.0,
+                                SizedBox(height: 10),
+                                Text(
+                                  "Effortlessly transform your meetings, interviews, and discussions into searchable text with SoundType AI. Simplify transcription, editing, summarization, and collaboration in one seamless workflow, designed to boost your productivity.",
+                                  style: TextStyle(
+                                    color: blacktextcolor,
+                                    fontSize: 13,
                                     fontWeight: FontWeight.bold,
-                                    borderRadius: 16.0,
                                   ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  CustomTextButton(
-                                    onPressed: () {
-                                      // Your action here
-                                    },
-                                    label: "Get Started",
-                                    borderColor: Colors.blue,
-                                    textColor: Colors.black,
-                                    borderRadius: 8.0,
-                                    borderWidth: 1.0,
-                                  ),
-                                ],
-                              )
-                            ],
+                                ),
+                                SizedBox(height: 15),
+                                Row(
+                                  children: [
+                                    CustomElevatedButton(
+                                      onPressed: () =>
+                                          Get.to(SingUpScreenWeb()),
+                                      label: "Register",
+                                      backgroundColor: Colors.blue,
+                                      textColor: Colors.white,
+                                      fontSize: 15.0,
+                                      fontWeight: FontWeight.bold,
+                                      borderRadius: 16.0,
+                                    ),
+                                    SizedBox(width: 20),
+                                    CustomTextButton(
+                                      onPressed: () {},
+                                      label: "Get Started",
+                                      borderColor: Colors.blue,
+                                      textColor: Colors.black,
+                                      borderRadius: 8.0,
+                                      borderWidth: 1.0,
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         Expanded(
-                            flex: 3,
-                            child: LayoutBuilder(
-                              builder: (context, constraints) {
-                                return SingleChildScrollView(
-                                  scrollDirection: Axis.horizontal,
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/3dweb.webp",
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.6,
-                                        fit: BoxFit.contain,
-                                      ),
-                                      Lottie.asset(
-                                        'assets/Animation - 1735297018291.json',
-                                        height:
-                                            MediaQuery.of(context).size.height *
-                                                0.3,
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                            ))
+                          flex: 3,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Image.asset(
+                                  "assets/3dweb.webp",
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.6,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                              Expanded(
+                                child: Lottie.asset(
+                                  'assets/Animation - 1735297018291.json',
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.3,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
                       ],
-                    )
-                  ],
-                ),
+                    ),
+                  )
+                ],
               ),
-            ),
+            )),
             SizedBox(
               height: 20,
             ),
@@ -281,67 +259,75 @@ class IntroScreenWeb extends StatelessWidget {
               overflow:
                   TextOverflow.ellipsis, // Optional: Text overflow behavior
             ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.6,
-              width: MediaQuery.of(context).size.width * 0.9,
-              decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: BorderRadius.circular(20)),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.5,
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                        ),
-                        child: Image.asset(
-                          "assets/how1.jpg",
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  color: blacktextcolor,
-                                  shape: BoxShape.circle),
-                              child: Center(
-                                child: Text(
-                                  "1",
-                                  style: TextStyle(
-                                      color: whittextcolor, fontSize: 30),
-                                ),
-                              ),
-                            ),
-                            CustomTextWidget(text: "AI Transcription"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            CustomTextWidget(
-                              text:
-                                  "Once your file is uploaded, our advanced AI-driven transcription technology takes over. It is specifically designed to convert spoken language into highly accurate text, accommodating various accents and dialects. The system recognizes technical terminology and distinguishes between speakers in multi-person recordings, making it perfect for applications ranging from lectures to interviews.",
-                              textAlign: TextAlign.center,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            CustomTextButton(
-                                onPressed: () {}, label: "GET STARTED")
-                          ],
-                        ),
-                      )
-                    ],
-                  )
-                ],
+           Container(
+  height: MediaQuery.of(context).size.height * 0.6,
+  width: MediaQuery.of(context).size.width * 0.9,
+  decoration: BoxDecoration(
+    color: Colors.grey[200],
+    borderRadius: BorderRadius.circular(20)
+  ),
+  child: Row(
+    children: [
+      Expanded(
+        flex: 2,
+        child: Container(
+          height: double.infinity,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+          ),
+          child: Image.asset(
+            "assets/how1.jpg",
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      Expanded(
+        flex: 3,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(
+                  color: blacktextcolor,
+                  shape: BoxShape.circle
+                ),
+                child: Center(
+                  child: Text(
+                    "1",
+                    style: TextStyle(
+                      color: whittextcolor,
+                      fontSize: 30
+                    ),
+                  ),
+                ),
               ),
-            ),
+              SizedBox(height: 10),
+              CustomTextWidget(text: "AI Transcription"),
+              SizedBox(height: 10),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: CustomTextWidget(
+                    text: "Once your file is uploaded, our advanced AI-driven transcription technology \n takes over. This technology is designed to convert spoken language into highly accurate  \n text. It adjusts for different accents and dialects, recognizes technical terminology,  \n and can differentiate between speakers in multi-person recordings, \n making it ideal for everything from lectures to interviews.",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              CustomTextButton(
+                onPressed: () {},
+                label: "GET STARTED"
+              )
+            ],
+          ),
+        ),
+      )
+    ],
+  ),
+),
             SizedBox(
               height: 15,
             ),
@@ -434,7 +420,7 @@ class IntroScreenWeb extends StatelessWidget {
                       ),
                       CustomTextWidget(
                         text:
-                            "Upload your file, and our advanced AI-powered transcription system will handle the rest. It accurately converts spoken language into text, adapting to diverse accents and dialects. With the ability to recognize technical terms and identify different speakers in group recordings, it’s the perfect solution for lectures, interviews, and more.",
+                            "Upload your file, and our advanced AI-powered transcription \n system will handle the rest. It accurately converts spoken \n language into text, adapting to diverse accents and \n  dialects. With the ability to recognize technical \n  terms and identify different speakers in group recordings, it’s\n the perfect solution for lectures, interviews, and more.",
                       )
                     ],
                   )
@@ -486,7 +472,7 @@ class IntroScreenWeb extends StatelessWidget {
                             Expanded(
                               child: CustomTextWidget(
                                   text:
-                                      "Our platform specializes in delivering advanced speech-to-text services through powerful APIs. With unmatched accuracy and efficiency, we provide seamless solutions for converting speech into text, supported by reliable technology and exceptional customer support."),
+                                      "Our platform specializes in delivering advanced \n speech-to-text services through powerful APIs.\n With unmatched accuracy and efficiency, we \n provide seamless solutions for converting speech\n into text,supported by reliable technology\n and exceptional customer \n support."),
                             )
                           ],
                         ),
@@ -518,7 +504,7 @@ class IntroScreenWeb extends StatelessWidget {
                           SizedBox(height: 10),
                           CustomTextWidget(
                             text:
-                                "SoundType AI has revolutionized our business operations. The transcription quality is exceptional, and the platform is incredibly user-friendly. It has saved us countless hours of manual transcription, enabling us to concentrate on our core activities. Highly recommended!",
+                                "SoundType AI has revolutionized our business \n operations. The transcription quality is exceptional,\n  and the platform is incredibly user-friendly.\n It has saved us countless hours of manual transcription, \n enabling us to concentrate on our core activities.\n Highly recommended!",
                             textColor:
                                 blacktextcolor, // Assuming you want the text in black
                             fontSize: 14.0, // Adjust font size as needed
@@ -561,7 +547,7 @@ class IntroScreenWeb extends StatelessWidget {
                           Expanded(
                             child: CustomTextWidget(
                                 text:
-                                    "Our website is dedicated to providing advanced speech-to-text solutions, specializing in converting English and Maldivian speech into Dhivehi text with exceptional accuracy. Designed to cater to a wide range of needs, our platform ensures seamless transcription services tailored for the Maldivian language. With user-friendly features and support for multiple export formats, including PDF and DOCX, we make it effortless to share, store, and utilize your transcriptions efficiently."),
+                                    "Our website is dedicated to providing advanced \n speech-to-text solutions, specializing in converting \n English and Maldivian speech into Dhivehi text with\n exceptional accuracy. Designed to cater to a wide \n range of needs, our platform ensures seamless \n transcription services \n tailored for the Maldivian language. With user-friendly \n features and support for\n multiple export formats,including PDF and DOCX, \n we make it effortless to share,\n store, and utilize your transcriptions efficiently."),
                           )
                         ],
                       ),
